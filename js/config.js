@@ -1,29 +1,30 @@
 export const siteConfig = Object.freeze({
   // Marca
-  brandName: "Delícias do Céu",
-  tagline: "Doces feitos com carinho para deixar seus momentos ainda mais especiais.",
+  brandName: "Delicias Do Ceu",
+  tagline:
+    "Doces feitos com carinho para deixar seus momentos ainda mais especiais.",
 
   // WhatsApp
-  // Formato futuro: 5519999999999
-  // Não utilizar +, espaços, parênteses ou traços.
-  whatsappNumber: "NUMERO_WHATSAPP",
-  whatsappDisplay: "(XX) XXXXX-XXXX",
+  // Formato internacional: 55 + DDD + número
+  whatsappNumber: "5519971107606",
+  whatsappDisplay: "(19) 97110-7606",
 
   // Instagram
-  instagramHandle: "@INSTAGRAM",
-  instagramUrl: "https://www.instagram.com/INSTAGRAM",
+  instagramHandle: "@deliciass.doceu",
+  instagramUrl:
+    "https://www.instagram.com/deliciass.doceu",
 
   // Atendimento
-  serviceRegion: "REGIAO_DE_ATENDIMENTO",
-  openingHours: "HORARIO_DE_ATENDIMENTO",
-  pickupInfo: "INFORMACOES_DE_RETIRADA",
-  deliveryInfo: "INFORMACOES_DE_ENTREGA",
+  serviceRegion: "Pedreira - SP",
+  openingHours: "Das 8h às 18h",
+  pickupInfo: "Retirada a definir",
+  deliveryInfo: "Entrega a definir",
 
   // Configurações do site
   locale: "pt-BR",
   currency: "BRL",
 
-  // Nomes utilizados no armazenamento do navegador
+  // Armazenamento no navegador
   storageKeys: {
     cart: "delicias-do-ceu:cart:v1",
     orderNotes: "delicias-do-ceu:order-notes:v1"
