@@ -360,6 +360,32 @@ input:focus-visible {
     0 6px 15px rgba(168, 79, 98, 0.2);
 }
 
+.brand-logo {
+  display: block;
+
+  width: 52px;
+  height: 52px;
+
+  flex: 0 0 auto;
+
+  object-fit: contain;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  filter:
+    drop-shadow(
+      0 5px 10px
+      rgba(70, 42, 49, 0.10)
+    );
+}
+
+.footer-brand-logo {
+  width: 58px;
+  height: 58px;
+}
+
 .brand-name {
   white-space: nowrap;
 }
@@ -2334,6 +2360,11 @@ line-clamp: 3;
 ========================================================= */
 
 @media (max-width: 370px) {
+
+  .brand-logo {
+  width: 43px;
+  height: 43px;
+}
 
   .container {
     width: min(

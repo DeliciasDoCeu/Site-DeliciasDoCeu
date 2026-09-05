@@ -1,6 +1,6 @@
 export const siteConfig = Object.freeze({
   // Marca
-  brandName: "Delicias Do Ceu",
+  brandName: "Delícias do Céu",
   tagline:
     "Doces feitos com carinho para deixar seus momentos ainda mais especiais.",
 
