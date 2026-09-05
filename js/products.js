@@ -23,10 +23,10 @@ export const products = [
 
     category: "doces",
 
-    image: "",
+    image: "./images/products/morango-cravejado.jpeg",
 
     imageAlt:
-      "Morango Cravejado da Delicias Do Ceu",
+      "Morango Cravejado artesanal da Delicias Do Ceu",
 
     featured: true,
 
