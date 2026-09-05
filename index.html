@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Delícias do Céu | Doces Artesanais</title>
+
+  <meta
+    name="description"
+    content="Conheça o cardápio da Delícias do Céu e faça seu pedido de doces artesanais pelo WhatsApp."
+  >
+
+  <meta name="theme-color" content="#fff8f4">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Delícias do Céu">
+  <meta
+    property="og:description"
+    content="Doces artesanais preparados com carinho para momentos especiais."
+  >
+
+  <!-- Favicon provisório -->
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍰</text></svg>"
+  >
+
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+  <!-- =========================================
+       ACESSIBILIDADE
+  ========================================== -->
+
+  <a class="skip-link" href="#main-content">
+    Pular para o conteúdo
+  </a>
+
+
+  <!-- =========================================
+       HEADER
+  ========================================== -->
+
+  <header class="site-header" id="inicio">
+    <div class="container header-container">
+
+      <a
+        href="#inicio"
+        class="brand"
+        aria-label="Delícias do Céu - Página inicial"
+      >
+        <span class="brand-symbol" aria-hidden="true">
+          ♡
+        </span>
+
+        <span
+          class="brand-name"
+          data-config="brandName"
+        >
+          Delícias do Céu
+        </span>
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-controls="mainNavigation"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+
+      <nav
+        class="main-navigation"
+        id="mainNavigation"
+        aria-label="Navegação principal"
+      >
+        <a href="#inicio">
+          Início
+        </a>
+
+        <a href="#cardapio">
+          Cardápio
+        </a>
+
+        <a href="#sobre">
+          Sobre
+        </a>
+
+        <a href="#contato">
+          Contato
+        </a>
+      </nav>
+
+
+      <div class="header-actions">
+
+        <a
+          href="#"
+          class="button button-secondary header-whatsapp"
+          id="headerWhatsappButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+
+
+        <button
+          type="button"
+          class="cart-button"
+          id="cartButton"
+          aria-label="Abrir carrinho"
+          aria-controls="cartDrawer"
+        >
+          <span aria-hidden="true">🛍️</span>
+
+          <span class="cart-button-text">
+            Carrinho
+          </span>
+
+          <span
+            class="cart-count"
+            id="cartCount"
+            aria-label="0 itens no carrinho"
+          >
+            0
+          </span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- =========================================
+       CONTEÚDO PRINCIPAL
+  ========================================== -->
+
+  <main id="main-content">
+
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <section class="hero">
+      <div class="container hero-container">
+
+        <div class="hero-content">
+
+          <span class="eyebrow">
+            Produção artesanal
+          </span>
+
+          <h1>
+            Um toque de carinho
+            <span>em cada doce.</span>
+          </h1>
+
+          <p
+            class="hero-description"
+            data-config="tagline"
+          >
+            Doces feitos com carinho para deixar seus momentos
+            ainda mais especiais.
+          </p>
+
+
+          <div class="hero-actions">
+
+            <a
+              href="#cardapio"
+              class="button button-primary"
+            >
+              Ver cardápio
+            </a>
+
+            <a
+              href="#"
+              class="button button-secondary"
+              id="heroWhatsappButton"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Pedir pelo WhatsApp
+            </a>
+
+          </div>
+
+
+          <ul class="hero-benefits">
+            <li>
+              <span aria-hidden="true">✓</span>
+              Produção artesanal
+            </li>
+
+            <li>
+              <span aria-hidden="true">✓</span>
+              Ingredientes selecionados
+            </li>
+
+            <li>
+              <span aria-hidden="true">✓</span>
+              Pedidos pelo WhatsApp
+            </li>
+          </ul>
+
+        </div>
+
+
+        <div
+          class="hero-visual"
+          aria-label="Espaço reservado para foto dos doces da Delícias do Céu"
+        >
+          <div class="hero-image-placeholder">
+            <span aria-hidden="true">🍫</span>
+
+            <p>
+              Aqui vamos colocar uma foto
+              bonita dos doces
+            </p>
+          </div>
+
+          <div class="hero-floating-card">
+            <strong>Feito com carinho</strong>
+            <span>para momentos especiais ♡</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         DIFERENCIAIS
+    ========================================== -->
+
+    <section
+      class="benefits-section"
+      aria-label="Diferenciais da confeitaria"
+    >
+      <div class="container benefits-grid">
+
+        <article class="benefit-card">
+          <span
+            class="benefit-icon"
+            aria-hidden="true"
+          >
+            ♡
+          </span>
+
+          <div>
+            <h2>Produção artesanal</h2>
+
+            <p>
+              Cada pedido preparado com cuidado e atenção aos detalhes.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="benefit-card">
+          <span
+            class="benefit-icon"
+            aria-hidden="true"
+          >
+            ✨
+          </span>
+
+          <div>
+            <h2>Qualidade</h2>
+
+            <p>
+              Ingredientes selecionados para garantir sabor e qualidade.
+            </p>
+          </div>
+        </article>
+
+
+        <article class="benefit-card">
+          <span
+            class="benefit-icon"
+            aria-hidden="true"
+          >
+            💬
+          </span>
+
+          <div>
+            <h2>Pedido fácil</h2>
+
+            <p>
+              Monte seu carrinho e envie tudo diretamente pelo WhatsApp.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         CARDÁPIO
+    ========================================== -->
+
+    <section
+      class="menu-section section"
+      id="cardapio"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="eyebrow">
+              Nosso cardápio
+            </span>
+
+            <h2>
+              Escolha seus favoritos
+            </h2>
+          </div>
+
+          <p>
+            Selecione os produtos, escolha as quantidades
+            e monte seu pedido.
+          </p>
+
+        </div>
+
+
+        <!-- As categorias serão criadas pelo JavaScript -->
+
+        <div
+          class="category-filters"
+          id="categoryFilters"
+          aria-label="Categorias do cardápio"
+        ></div>
+
+
+        <!-- Os produtos serão criados pelo JavaScript -->
+
+        <div
+          class="product-grid"
+          id="productGrid"
+        ></div>
+
+
+        <div
+          class="empty-products"
+          id="emptyProducts"
+          hidden
+        >
+          <p>
+            Nenhum produto disponível nesta categoria no momento.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         CHAMADA PARA PEDIDO
+    ========================================== -->
+
+    <section class="order-banner">
+      <div class="container order-banner-container">
+
+        <div>
+          <span class="eyebrow">
+            Ficou com vontade?
+          </span>
+
+          <h2>
+            Monte seu pedido em poucos minutos.
+          </h2>
+
+          <p>
+            Escolha seus doces favoritos e envie o pedido
+            diretamente para a Delícias do Céu.
+          </p>
+        </div>
+
+
+        <a
+          href="#cardapio"
+          class="button button-light"
+        >
+          Escolher meus doces
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         SOBRE
+    ========================================== -->
+
+    <section
+      class="about-section section"
+      id="sobre"
+    >
+      <div class="container about-container">
+
+        <div
+          class="about-visual"
+          aria-label="Espaço reservado para fotografia da produção artesanal"
+        >
+          <div class="about-image-placeholder">
+            <span aria-hidden="true">🧁</span>
+
+            <p>
+              Foto da confeitaria ou
+              da produção artesanal
+            </p>
+          </div>
+        </div>
+
+
+        <div class="about-content">
+
+          <span class="eyebrow">
+            Sobre nós
+          </span>
+
+          <h2>
+            Doces que transformam pequenos momentos
+            em boas lembranças.
+          </h2>
+
+          <p>
+            A Delícias do Céu nasceu do carinho pela confeitaria
+            e da vontade de tornar momentos especiais ainda mais doces.
+          </p>
+
+          <p>
+            Nossa produção é artesanal e cada pedido é preparado
+            com cuidado, atenção aos detalhes e ingredientes selecionados.
+          </p>
+
+          <p class="temporary-text">
+            Texto provisório. Depois vamos substituir pela história
+            real da confeitaria.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================================
+         CONTATO
+    ========================================== -->
+
+    <section
+      class="contact-section section"
+      id="contato"
+    >
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div>
+            <span class="eyebrow">
+              Fale conosco
+            </span>
+
+            <h2>
+              Informações e atendimento
+            </h2>
+          </div>
+
+          <p>
+            Entre em contato para tirar dúvidas ou fazer seu pedido.
+          </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+          <article class="contact-card">
+
+            <span
+              class="contact-icon"
+              aria-hidden="true"
+            >
+              💬
+            </span>
+
+            <h3>WhatsApp</h3>
+
+            <p id="contactWhatsappDisplay">
+              (XX) XXXXX-XXXX
+            </p>
+
+            <a
+              href="#"
+              id="contactWhatsappButton"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Conversar agora
+            </a>
+
+          </article>
+
+
+          <article class="contact-card">
+
+            <span
+              class="contact-icon"
+              aria-hidden="true"
+            >
+              📷
+            </span>
+
+            <h3>Instagram</h3>
+
+            <p
+              id="contactInstagramDisplay"
+              data-config="instagramHandle"
+            >
+              @INSTAGRAM
+            </p>
+
+            <a
+              href="#"
+              id="instagramLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver Instagram
+            </a>
+
+          </article>
+
+
+          <article class="contact-card">
+
+            <span
+              class="contact-icon"
+              aria-hidden="true"
+            >
+              📍
+            </span>
+
+            <h3>Região de atendimento</h3>
+
+            <p data-config="serviceRegion">
+              REGIAO_DE_ATENDIMENTO
+            </p>
+
+          </article>
+
+
+          <article class="contact-card">
+
+            <span
+              class="contact-icon"
+              aria-hidden="true"
+            >
+              🕐
+            </span>
+
+            <h3>Horário</h3>
+
+            <p data-config="openingHours">
+              HORARIO_DE_ATENDIMENTO
+            </p>
+
+          </article>
+
+
+          <article class="contact-card">
+
+            <span
+              class="contact-icon"
+              aria-hidden="true"
+            >
+              🛍️
+            </span>
+
+            <h3>Retirada</h3>
+
+            <p data-config="pickupInfo">
+              INFORMACOES_DE_RETIRADA
+            </p>
+
+          </article>
+
+
+          <article class="contact-card">
+
+            <span
+              class="contact-icon"
+              aria-hidden="true"
+            >
+              🛵
+            </span>
+
+            <h3>Entrega</h3>
+
+            <p data-config="deliveryInfo">
+              INFORMACOES_DE_ENTREGA
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       RODAPÉ
+  ========================================== -->
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+
+      <div class="footer-brand">
+
+        <a
+          href="#inicio"
+          class="brand footer-logo"
+        >
+          <span
+            class="brand-symbol"
+            aria-hidden="true"
+          >
+            ♡
+          </span>
+
+          <span data-config="brandName">
+            Delícias do Céu
+          </span>
+        </a>
+
+        <p>
+          Doces artesanais preparados com carinho
+          para deixar seus momentos ainda mais especiais.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h2>Navegação</h2>
+
+        <a href="#inicio">
+          Início
+        </a>
+
+        <a href="#cardapio">
+          Cardápio
+        </a>
+
+        <a href="#sobre">
+          Sobre
+        </a>
+
+        <a href="#contato">
+          Contato
+        </a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h2>Contato</h2>
+
+        <a
+          href="#"
+          id="footerWhatsappLink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+
+        <a
+          href="#"
+          id="footerInstagramLink"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+      <p>
+        © <span id="footerYear"></span>
+        <span data-config="brandName">
+          Delícias do Céu
+        </span>.
+        Todos os direitos reservados.
+      </p>
+
+    </div>
+  </footer>
+
+
+  <!-- =========================================
+       OVERLAY DO CARRINHO
+  ========================================== -->
+
+  <div
+    class="cart-overlay"
+    id="cartOverlay"
+    hidden
+  ></div>
+
+
+  <!-- =========================================
+       CARRINHO LATERAL
+  ========================================== -->
+
+  <aside
+    class="cart-drawer"
+    id="cartDrawer"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cartTitle"
+    aria-hidden="true"
+    tabindex="-1"
+  >
+
+    <div class="cart-header">
+
+      <div>
+        <span class="eyebrow">
+          Seu pedido
+        </span>
+
+        <h2 id="cartTitle">
+          Carrinho
+        </h2>
+      </div>
+
+
+      <button
+        type="button"
+        class="cart-close"
+        id="closeCartButton"
+        aria-label="Fechar carrinho"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <div class="cart-content">
+
+      <div
+        class="cart-empty"
+        id="cartEmpty"
+      >
+        <span
+          class="cart-empty-icon"
+          aria-hidden="true"
+        >
+          🛍️
+        </span>
+
+        <h3>
+          Seu carrinho está vazio
+        </h3>
+
+        <p>
+          Adicione alguns doces do cardápio
+          para começar seu pedido.
+        </p>
+
+        <button
+          type="button"
+          class="button button-primary"
+          id="emptyCartMenuButton"
+        >
+          Ver cardápio
+        </button>
+      </div>
+
+
+      <div
+        class="cart-items"
+        id="cartItems"
+      ></div>
+
+
+      <div
+        class="cart-summary"
+        id="cartSummary"
+        hidden
+      >
+
+        <div class="cart-total-row">
+          <span>
+            Total
+          </span>
+
+          <strong id="cartTotal">
+            R$ 0,00
+          </strong>
+        </div>
+
+
+        <div class="cart-notes">
+
+          <label for="cartNotes">
+            Observações do pedido
+          </label>
+
+          <textarea
+            id="cartNotes"
+            rows="4"
+            maxlength="500"
+            placeholder="Ex.: retirar às 18h, sem embalagem para presente..."
+          ></textarea>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="button button-primary checkout-button"
+          id="checkoutButton"
+        >
+          Finalizar pelo WhatsApp
+        </button>
+
+
+        <button
+          type="button"
+          class="clear-cart-button"
+          id="clearCartButton"
+        >
+          Limpar carrinho
+        </button>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+  <!-- =========================================
+       BOTÃO FLUTUANTE DO CARRINHO NO MOBILE
+  ========================================== -->
+
+  <button
+    type="button"
+    class="mobile-cart-button"
+    id="mobileCartButton"
+    aria-label="Abrir carrinho"
+  >
+
+    <span aria-hidden="true">
+      🛍️
+    </span>
+
+    <span>
+      Ver carrinho
+    </span>
+
+    <span
+      class="mobile-cart-count"
+      id="mobileCartCount"
+    >
+      0
+    </span>
+
+  </button>
+
+
+  <!-- =========================================
+       MENSAGENS PARA ACESSIBILIDADE
+  ========================================== -->
+
+  <div
+    class="visually-hidden"
+    id="liveRegion"
+    aria-live="polite"
+    aria-atomic="true"
+  ></div>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script
+    type="module"
+    src="./js/main.js"
+  ></script>
+
+</body>
+</html>
