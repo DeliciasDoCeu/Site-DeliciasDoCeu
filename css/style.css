@@ -1156,6 +1156,7 @@ line-clamp: 3;
 }
 
 .add-to-cart-button {
+  
   display: inline-flex;
 
   flex: 0 0 auto;
@@ -1178,6 +1179,27 @@ line-clamp: 3;
   transition:
     background-color var(--transition-fast),
     transform var(--transition-fast);
+}
+
+.product-details-button {
+  align-self: flex-start;
+
+  margin-bottom: 14px;
+
+  padding: 0;
+
+  color: var(--color-primary);
+
+  background: transparent;
+
+  font-size: 0.78rem;
+  font-weight: 850;
+
+  cursor: pointer;
+}
+
+.product-details-button:hover {
+  text-decoration: underline;
 }
 
 .add-to-cart-button:hover {
@@ -2336,6 +2358,179 @@ line-clamp: 3;
   }
 }
 
+/* =========================================================
+   DETALHES DO PRODUTO
+========================================================= */
+
+.product-card {
+  cursor: pointer;
+}
+
+.product-dialog {
+  width: min(
+    calc(100% - 24px),
+    540px
+  );
+
+  max-height: calc(100dvh - 32px);
+
+  padding: 0;
+
+  overflow: auto;
+
+  border: 0;
+  border-radius: 26px;
+
+  color: var(--color-text);
+  background: var(--color-surface);
+
+  box-shadow: var(--shadow-lg);
+}
+
+.product-dialog::backdrop {
+  background:
+    rgba(35, 25, 28, 0.58);
+
+  backdrop-filter: blur(4px);
+}
+
+.product-dialog-content {
+  position: relative;
+}
+
+.product-dialog-close {
+  position: absolute;
+
+  top: 14px;
+  right: 14px;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  color: var(--color-text);
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  box-shadow: var(--shadow-sm);
+
+  font-size: 1.6rem;
+
+  cursor: pointer;
+}
+
+.product-dialog-image {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f9e7df,
+      #f6dfe4
+    );
+
+  font-size: 4.5rem;
+}
+
+.product-dialog-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.product-dialog-info {
+  padding: 24px;
+}
+
+.product-dialog-category {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: var(--color-primary);
+
+  font-size: 0.75rem;
+  font-weight: 900;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.product-dialog-info h2 {
+  margin-bottom: 13px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 1.85rem;
+
+  line-height: 1.1;
+}
+
+.product-dialog-description {
+  margin-bottom: 20px;
+
+  color: var(--color-text-soft);
+
+  font-size: 0.95rem;
+
+  line-height: 1.65;
+}
+
+.product-dialog-price {
+  display: block;
+
+  margin-bottom: 24px;
+
+  color: var(--color-primary-dark);
+
+  font-size: 1.45rem;
+}
+
+.product-dialog-actions {
+  display: grid;
+
+  gap: 20px;
+}
+
+.product-dialog-quantity {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+}
+
+.product-dialog-quantity > span {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.product-dialog-add {
+  width: 100%;
+}
 
 /* =========================================================
    25. MOVIMENTO REDUZIDO

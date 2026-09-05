@@ -729,6 +729,114 @@
     </div>
   </footer>
 
+<!-- =========================================
+     DETALHES DO PRODUTO
+========================================== -->
+
+<dialog
+  class="product-dialog"
+  id="productDialog"
+  aria-labelledby="productDialogTitle"
+>
+  <div class="product-dialog-content">
+
+    <button
+      type="button"
+      class="product-dialog-close"
+      id="productDialogClose"
+      aria-label="Fechar detalhes do produto"
+    >
+      ×
+    </button>
+
+
+    <div
+      class="product-dialog-image"
+      id="productDialogImage"
+    ></div>
+
+
+    <div class="product-dialog-info">
+
+      <span
+        class="product-dialog-category"
+        id="productDialogCategory"
+      >
+        Doces
+      </span>
+
+
+      <h2 id="productDialogTitle">
+        Produto
+      </h2>
+
+
+      <p
+        class="product-dialog-description"
+        id="productDialogDescription"
+      ></p>
+
+
+      <strong
+        class="product-dialog-price"
+        id="productDialogPrice"
+      >
+        R$ 0,00
+      </strong>
+
+
+      <div class="product-dialog-actions">
+
+        <div class="product-dialog-quantity">
+
+          <span>Quantidade</span>
+
+          <div class="quantity-control">
+
+            <button
+              type="button"
+              class="quantity-button"
+              id="productQuantityDecrease"
+              aria-label="Diminuir quantidade"
+            >
+              −
+            </button>
+
+            <span
+              class="quantity-value"
+              id="productQuantityValue"
+            >
+              1
+            </span>
+
+            <button
+              type="button"
+              class="quantity-button"
+              id="productQuantityIncrease"
+              aria-label="Aumentar quantidade"
+            >
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <button
+          type="button"
+          class="button button-primary product-dialog-add"
+          id="productDialogAdd"
+        >
+          Adicionar ao carrinho
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+</dialog>
 
   <!-- =========================================
        OVERLAY DO CARRINHO
