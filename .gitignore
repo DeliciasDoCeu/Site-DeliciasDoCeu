@@ -1,0 +1,25 @@
+# Variáveis de ambiente / segredos
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# Dependências
+node_modules/
+
+# Editores
+.vscode/
+.idea/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cloudflare / Wrangler local
+.wrangler/
