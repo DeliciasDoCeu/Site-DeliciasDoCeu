@@ -31,6 +31,27 @@ export const products = [
     featured: true,
 
     available: true
+  },
+  {
+    id: "brownie-ninho-nutella",
+
+    name: "Brownie com Ninho e Nutella",
+
+    description:
+      "Brownie com cobertura de creme de Ninho e Nutella, preparado com carinho para deixar o seu dia mais doce.",
+
+    price: 10,
+
+    category: "doces",
+
+    image: "./images/products/brownie-ninho-nutella.jpeg",
+
+    imageAlt:
+      "Brownie com creme de Ninho e Nutella da Delícias do Céu",
+
+    featured: true,
+
+    available: true
   }
 ];
 
