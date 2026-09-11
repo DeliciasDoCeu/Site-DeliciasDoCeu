@@ -1690,6 +1690,10 @@ line-clamp: 3;
   text-align: center;
 }
 
+.cart-empty[hidden] {
+  display: none;
+}
+
 .cart-empty-icon {
   display: flex;
 
