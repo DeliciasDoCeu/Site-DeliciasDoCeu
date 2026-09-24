@@ -7,7 +7,8 @@ test('carrinho persiste sabores e kits, usa desconto no WhatsApp e permite remov
   globalThis.location = { hostname: 'localhost' };
   let items = fixture();
   t.mock.method(globalThis, 'fetch', async () => Response.json({ items }));
-  const { loadCatalog } = await import('../js/products.js');
+  const { loadCatalog, apiUrl } = await import('../js/products.js');
+  assert.equal(apiUrl('/api/catalog'), '/api/catalog');
   const cart = await import('../js/cart.js');
   const { buildWhatsAppMessage, buildWhatsAppUrl } = await import('../js/whatsapp.js');
   await loadCatalog();

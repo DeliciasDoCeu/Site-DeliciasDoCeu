@@ -1,6 +1,6 @@
 export const siteConfig = Object.freeze({
-  // Ativado após configurar o painel e os recursos na Cloudflare.
-  catalogApiUrl: "",
+  // Catálogo e conferência de pedidos; administração protegida por chave de acesso.
+  catalogApiUrl: "https://delicias-do-ceu-painel.ester-elsie05.workers.dev",
   // Marca
   brandName: "Delícias do Céu",
   tagline:

@@ -2,6 +2,9 @@
 
 Cardápio em Cloudflare Pages, painel privado em Workers, dados em D1 e fotos em KV. Nenhum serviço pago é necessário. O login usa chaves de acesso (WebAuthn), sem Cloudflare Access, cartão ou senha compartilhada.
 
+- Loja: https://delicias-do-ceu.pages.dev
+- Painel: https://delicias-do-ceu-painel.ester-elsie05.workers.dev/admin/
+
 ## Para a dona da loja
 
 1. Abra o convite privado no seu celular e toque em **Criar minha chave de acesso**. Confirme a biometria ou o PIN e salve a chave no seu gerenciador. O convite expira e funciona somente na primeira ativação. Não o divulgue.

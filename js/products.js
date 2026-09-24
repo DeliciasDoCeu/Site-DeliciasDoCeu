@@ -10,7 +10,8 @@ export const categories = Object.freeze([
 let catalog = structuredClone(seedCatalog);
 export let products = [];
 export const getCatalog = () => catalog;
-export const apiUrl = (path) => `${siteConfig.catalogApiUrl || ""}${path}`;
+const localPreview = () => typeof location !== 'undefined' && ['localhost', '127.0.0.1'].includes(location.hostname);
+export const apiUrl = (path) => `${localPreview() ? '' : siteConfig.catalogApiUrl || ""}${path}`;
 
 function refreshProducts() {
   products = publicCatalog(catalog).map((item) => {
