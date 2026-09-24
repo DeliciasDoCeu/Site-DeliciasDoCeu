@@ -1,0 +1,12 @@
+import fs from "node:fs/promises";
+import path from "node:path";
+const root = path.resolve(import.meta.dirname, "..");
+const store = path.join(root, "dist");
+const admin = path.join(root, "dist-admin");
+await fs.mkdir(store, { recursive: true });
+await fs.mkdir(admin, { recursive: true });
+for (const file of ["index.html", "css", "js", "images"]) await fs.cp(path.join(root, file), path.join(store, file), { recursive: true });
+await fs.cp(path.join(root, "admin"), admin, { recursive: true });
+await fs.copyFile(path.join(root, "js/catalog-core.js"), path.join(admin, "catalog-core.js"));
+await fs.copyFile(path.join(root, "node_modules/@simplewebauthn/browser/dist/bundle/index.umd.min.js"), path.join(admin, "passkeys.js"));
+console.log("Site preparado em dist/ e painel em dist-admin/. Nenhuma credencial é incluída.");

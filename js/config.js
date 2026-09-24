@@ -1,4 +1,6 @@
 export const siteConfig = Object.freeze({
+  // Ativado após configurar o painel e os recursos na Cloudflare.
+  catalogApiUrl: "",
   // Marca
   brandName: "Delícias do Céu",
   tagline:

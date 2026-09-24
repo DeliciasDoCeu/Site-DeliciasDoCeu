@@ -1,0 +1,11 @@
+{
+  "name": "delicias-do-ceu-painel",
+  "main": "index.js",
+  "compatibility_date": "2026-09-24",
+  "assets": { "directory": "../dist-admin", "binding": "ASSETS", "run_worker_first": true },
+  "d1_databases": [{ "binding": "DB", "database_name": "delicias-do-ceu-catalogo", "database_id": "CONFIGURAR_NA_CONTA" }],
+  "kv_namespaces": [{ "binding": "PHOTOS", "id": "CONFIGURAR_NA_CONTA" }],
+  "vars": {
+    "STORE_ORIGIN": "https://delicias-do-ceu.pages.dev"
+  }
+}

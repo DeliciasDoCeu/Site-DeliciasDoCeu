@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Minha loja · Delícias do Céu</title>
+  <link rel="stylesheet" href="./admin.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./"><span class="brand-mark">D</span><span>Delícias do Céu<small>Minha loja</small></span></a><nav><a href="https://delicias-do-ceu.pages.dev" target="_blank" rel="noopener">Ver site ↗</a><button id="logout" class="text-button">Sair</button></nav></header>
+  <main class="container">
+    <p id="notice" class="notice" role="status">Carregando sua loja…</p>
+    <div id="dashboard" hidden>
+      <div class="page-heading"><div><p class="eyebrow">FEITO POR VOCÊ</p><h1>Seu cardápio, do seu jeito.</h1><p>Cuide dos doces, sabores e kits que seus clientes vão encontrar.</p></div><button id="newProduct" class="primary">+ Adicionar doce</button></div>
+      <section class="stats" aria-label="Resumo da loja"><div><span>Produtos ativos</span><strong id="productCount">0</strong></div><div><span>Kits ativos</span><strong id="kitCount">0</strong></div><div><span>Fotos da loja</span><strong id="storageValue">0 MB</strong><progress id="storageProgress" max="100" value="0"></progress></div></section>
+      <div class="catalog-toolbar"><div class="tabs" aria-label="Filtrar catálogo"><button data-tab="product" aria-pressed="true">Doces</button><button data-tab="kit" aria-pressed="false">Kits</button><button data-tab="inactive" aria-pressed="false">Inativos</button></div><button id="newKit" class="secondary">+ Criar kit</button></div>
+      <div id="catalogList" class="catalog-list"></div>
+      <section class="storage-panel"><div><h2>Espaço das fotos</h2><p id="storageDetails"></p><p class="muted">A limpeza preserva todas as fotos vinculadas a produtos, inclusive inativos. Fotos enviadas há menos de 24 horas também são preservadas.</p></div><button id="cleanup" class="secondary">Limpar fotos sem uso</button></section>
+      <p class="footnote">Confirme as vendas pelo WhatsApp e atualize as quantidades aqui. Adicionar ao carrinho não reserva nem desconta estoque.</p>
+      <p class="footnote"><a href="/auth/login#adicionar=1">Cadastrar outra chave de acesso</a> · Entre novamente antes de adicionar uma chave de segurança.</p>
+    </div>
+  </main>
+  <dialog id="editor" aria-labelledby="editorTitle">
+    <form id="productForm">
+      <header class="editor-heading"><div><p class="eyebrow" id="editorKind">DOCE</p><h2 id="editorTitle">Adicionar doce</h2></div><button type="button" id="closeEditor" class="icon-button" aria-label="Fechar formulário">×</button></header>
+      <div class="editor-body">
+        <p id="formError" class="notice error" role="alert" hidden></p>
+        <div class="photo-field"><img id="photoPreview" alt="Foto do produto" hidden><div><label for="photoInput">Foto do produto</label><input type="file" id="photoInput" accept="image/jpeg,image/png,image/webp"><p class="muted">Escolha uma foto da galeria. O tamanho será otimizado automaticamente.</p><button type="button" id="removePhoto" class="text-button" hidden>Remover foto</button></div></div>
+        <label for="productName">Nome</label><input id="productName" maxlength="100" required placeholder="Ex.: Cone trufado">
+        <label for="productDescription">Descrição</label><textarea id="productDescription" maxlength="1000" rows="3" placeholder="Conte o que torna esse doce especial."></textarea>
+        <div class="field-grid"><div><label for="productPrice">Preço normal (R$)</label><input id="productPrice" inputmode="decimal" required placeholder="25,00"></div><div><label for="productSale">Preço com desconto (R$)</label><input id="productSale" inputmode="decimal" placeholder="Opcional: 20,00"></div></div>
+        <p id="pricePreview" class="price-preview"></p>
+        <p class="muted">Se cadastrar sabores, os valores definidos em cada sabor serão usados no pedido.</p>
+        <div id="stockField"><label for="productStock">Quantidade disponível</label><input id="productStock" type="number" min="0" max="9999" step="1"><p class="muted">Zero significa esgotado. Deixe vazio apenas se não controlar a quantidade.</p></div>
+        <section id="variantsSection" class="editor-section"><div class="section-heading"><div><h3>Sabores / variações</h3><p class="muted">Opcional. Cada sabor tem seu preço e estoque.</p></div><button type="button" id="addVariant" class="secondary">+ Sabor</button></div><div id="variantsList"></div></section>
+        <section id="componentsSection" class="editor-section" hidden><div class="section-heading"><div><h3>O que vem no kit</h3><p class="muted">Escolha o produto, o sabor e quantas unidades entram em cada kit.</p></div><button type="button" id="addComponent" class="secondary">+ Item</button></div><div id="componentsList"></div><p id="kitCapacity" class="notice"></p></section>
+        <fieldset class="visibility"><legend>Exibição no site</legend><label class="check"><input id="productActive" type="checkbox" checked> Ativo no cardápio</label><label class="check"><input id="productFeatured" type="checkbox"> Mostrar selo “Destaque”</label><p class="muted">Um item inativo fica salvo aqui e deixa de aparecer para os clientes.</p></fieldset>
+      </div>
+      <footer class="editor-footer"><button type="button" id="cancelEditor" class="secondary">Cancelar</button><button type="submit" id="saveProduct" class="primary">Salvar no site</button></footer>
+    </form>
+  </dialog>
+  <script type="module" src="./admin.js"></script>
+</body>
+</html>

@@ -40,13 +40,16 @@ function hasValidWhatsAppNumber() {
 /**
  * Cria a mensagem completa do pedido.
  */
-export function buildWhatsAppMessage(observations = "") {
+export function buildWhatsAppMessage(observations = "", quote = null) {
   if (isCartEmpty()) {
     return "";
   }
 
-  const items = getDetailedCartItems();
-  const total = getCartTotal();
+  const items = quote ? quote.lines.map((line) => ({
+    quantity: line.quantity, subtotal: line.subtotalCents / 100,
+    product: { name: line.name + (line.variantName ? ` — ${line.variantName}` : ""), components: line.components }
+  })) : getDetailedCartItems();
+  const total = quote ? quote.totalCents / 100 : getCartTotal();
 
   const lines = [];
 
@@ -60,6 +63,10 @@ export function buildWhatsAppMessage(observations = "") {
     lines.push(
       `${item.quantity}x ${item.product.name} — ${formatCurrency(item.subtotal)}`
     );
+    if (item.product.components?.length) {
+      lines.push("  Composição de cada kit:");
+      item.product.components.forEach((part) => lines.push(`  • ${part.quantity}x ${part.name}${part.variantName ? ` — ${part.variantName}` : ""}`));
+    }
   });
 
   lines.push("");
@@ -79,7 +86,7 @@ export function buildWhatsAppMessage(observations = "") {
 /**
  * Gera a URL que será aberta no WhatsApp.
  */
-export function buildWhatsAppUrl(observations = "") {
+export function buildWhatsAppUrl(observations = "", quote = null) {
   if (isCartEmpty()) {
     return null;
   }
@@ -96,7 +103,7 @@ export function buildWhatsAppUrl(observations = "") {
     siteConfig.whatsappNumber
   );
 
-  const message = buildWhatsAppMessage(observations);
+  const message = buildWhatsAppMessage(observations, quote);
 
   return `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 }
@@ -107,18 +114,15 @@ export function buildWhatsAppUrl(observations = "") {
  * Retorna true se conseguiu iniciar a abertura
  * e false caso exista algum problema.
  */
-export function openWhatsAppOrder(observations = "") {
-  const url = buildWhatsAppUrl(observations);
+export function openWhatsAppOrder(observations = "", quote = null) {
+  const url = buildWhatsAppUrl(observations, quote);
 
   if (!url) {
     return false;
   }
 
-  window.open(
-    url,
-    "_blank",
-    "noopener,noreferrer"
-  );
+  // A conferência online é assíncrona; navegar evita bloqueio de pop-ups no celular.
+  window.location.assign(url);
 
   return true;
 }

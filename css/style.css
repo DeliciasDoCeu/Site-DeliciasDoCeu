@@ -4,6 +4,20 @@
    Abordagem: Mobile First
 ========================================================= */
 
+[hidden] { display: none !important; }
+
+.product-price del, .product-dialog-price del { display: block; font-size: .8rem; font-weight: 500; color: #75666a; }
+.product-price .price-prefix { display: block; font-size: .75rem; font-weight: 500; }
+.product-sold-out { color: #925633; font-size: .85rem; font-weight: 700; margin-bottom: 10px; }
+.product-variant-field { margin-top: 18px; }
+.product-variant-field label { display: block; font-weight: 700; margin-bottom: 7px; }
+.product-variant-field select { width: 100%; padding: 12px; border: 1px solid #dbc5cb; border-radius: 10px; background: white; font: inherit; }
+.product-kit-contents { margin-block: 15px; padding-left: 18px; list-style: disc; color: #75666a; }
+.product-stock-status { font-size: .88rem; color: #75666a; margin-top: 14px; }
+.cart-feedback { margin: 16px 20px; padding: 13px; border-radius: 10px; background: #fff0ed; color: #963c34; font-size: .9rem; }
+.cart-item-components { font-size: .8rem; margin-block: 8px; color: #75666a; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+
 
 /* =========================================================
    1. VARIÁVEIS

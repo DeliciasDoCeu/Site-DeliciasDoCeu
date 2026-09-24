@@ -1,0 +1,12 @@
+{
+  "name": "delicias-do-ceu-painel",
+  "account_id": "63093a3e614a330d306883cc75911048",
+  "main": "index.js",
+  "compatibility_date": "2026-09-24",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": { "directory": "../dist-admin", "binding": "ASSETS", "run_worker_first": true, "html_handling": "none" },
+  "d1_databases": [{ "binding": "DB", "database_name": "delicias-do-ceu-catalogo", "database_id": "b3d41aa4-6647-40f3-a184-ea7747648b3f" }],
+  "kv_namespaces": [{ "binding": "PHOTOS", "id": "7af80499e78e4ad5bb97deb1461e80d8" }],
+  "vars": { "STORE_ORIGIN": "https://delicias-do-ceu.pages.dev" }
+}
